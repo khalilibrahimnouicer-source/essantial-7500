@@ -15,7 +15,7 @@ const cats=["Tous","Sneakers","Running","Nouveautés"];
 export default function Home(){
   const [cat,setCat]=useState("Tous");
   const filtered=useMemo(()=>cat==="Tous"?products:products.filter(p=>p.cat===cat),[cat]);
-  const snap=(product:string)=>window.open("https://www.snapchat.com/add/essential.7500?text="+encodeURIComponent("Salut, je veux commander : "+product)," _blank");
+  const snap=(product:string)=>window.open("https://www.snapchat.com/add/essential.7500?text="+encodeURIComponent("Salut, je veux commander : "+product),"_blank");
   return <main>
     <header className="nav"><a className="logo" href="#">ESSENTIAL<span>.7500</span></a><nav><a href="#shop">SHOP</a><a href="#story">À PROPOS</a><a href="#faq">FAQ</a></nav><button className="snap" onClick={()=>window.open("https://www.snapchat.com/add/essential.7500","_blank")}>SNAPCHAT ↗</button></header>
 
